@@ -1,0 +1,11 @@
+python 코드로 변환
+해당하는 파일있는 위치로 이동
+
+pyuic5 main.ui -o main.py
+
+라이브러리 설치
+pip install PyQt5
+pip install pyqt5-tools
+
+pyqt5 -> qt designer -> 설치 및 실행 방법 
+https://tmdhhey.tistory.com/37
