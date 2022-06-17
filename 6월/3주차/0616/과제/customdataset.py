@@ -14,9 +14,9 @@ class CustomDataset(Dataset):
 
         paths = sorted(glob.glob(os.path.join(data_path, mode, '*')))
         self.labels = [path.split('\\')[-1] for path in paths]
-        self.train_dict = {label: sorted(glob.glob(os.path.join(data_path, 'train', '*', '*.jpg')))
+        self.train_dict = {label: sorted(glob.glob(os.path.join(data_path, 'train', label, '*.jpg')))
                            for label in self.labels}
-        self.valid_dict = {label: sorted(glob.glob(os.path.join(data_path, 'val', '*', '*.jpg')))
+        self.valid_dict = {label: sorted(glob.glob(os.path.join(data_path, 'val', label, '*.jpg')))
                            for label in self.labels}
 
     def __getitem__(self, index):
