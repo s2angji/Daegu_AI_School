@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 
 # 모델 가중치 저장할 폴더 생성
-os.makedirs('\\weights', exist_ok=True)
+os.makedirs('.\\weights', exist_ok=True)
 
 # device
 # device = 'cuda' if torch.cuda.is_available() else 'mps'
