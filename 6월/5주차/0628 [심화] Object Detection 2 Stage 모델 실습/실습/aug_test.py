@@ -15,6 +15,17 @@ import albumentations as albumentations
 from albumentations.pytorch import ToTensorV2
 
 
+'''
+ip install albumentations 설치 후 CV2 최신버전으로 올라감.. 특정 버전에서 ToTensorV2 안되는것을 확인 
+
+최신버전 올라간 cv2 삭제 후 아래 버전으로 다시 설치 필수
+
+cv2 버전 
+pip uninstall opencv-contrib-python opencv-python opencv-python-headless
+pip install opencv-contrib-python==4.5.5.64 opencv-python==4.5.5.62 opencv-python-headless==4.5.5.64
+'''
+
+
 class TorchvisionDataset(Dataset):
     def __init__(self, path, transform=None):
         self.path = path
@@ -27,9 +38,9 @@ class TorchvisionDataset(Dataset):
         img_path = os.path.join(self.path, file_image)
 
         if 'test' in self.path:
-            label_path = os.path.join("test_annotations/", file_label)
+            label_path = os.path.join("test_annotations\\", file_label)
         else:
-            label_path = os.path.join("annotations/", file_label)
+            label_path = os.path.join("annotations\\", file_label)
 
         img = Image.open(img_path).convert("RGB")
 
@@ -59,9 +70,9 @@ class AlbumentationsDataset(Dataset):
         img_path = os.path.join(self.path, file_image)
 
         if 'test' in self.path:
-            label_path = os.path.join("test_annotations/", file_label)
+            label_path = os.path.join("test_annotations\\", file_label)
         else:
-            label_path = os.path.join("annotations/", file_label)
+            label_path = os.path.join("annotations\\", file_label)
 
         """Read an images with OpenCV"""
         image = cv2.imread(img_path)
@@ -107,17 +118,17 @@ bbox_transform = albumentations.Compose([
     format='pascal_voc', label_fields=['labels']))
 
 bbox_transform_dataset = AlbumentationsDataset(
-    path="./images/", transform=bbox_transform
+    path=".\\images\\", transform=bbox_transform
 )
 
 torchvision_dataset = TorchvisionDataset(
-    path="./images/", transform=torchvision_transform)
+    path=".\\images\\", transform=torchvision_transform)
 
 
 only_totensor = transforms.ToTensor()
 
 torchvision_dataset_no_transform = TorchvisionDataset(
-    path="./images/", transform=only_totensor)
+    path=".\\images\\", transform=only_totensor)
 
 img, annot, transform_time = torchvision_dataset_no_transform[0]
 

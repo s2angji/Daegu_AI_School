@@ -27,8 +27,12 @@ parser.add_argument('--data', type=str, help='key for selecting data..!!')
 args = parser.parse_args()
 
 
+# download_file_from_google_drive(
+#     id_=file_id_dic[args.data], destination=file_destinations[args.data]
+# )
+
 download_file_from_google_drive(
-    id_=file_id_dic[args.data], destination=file_destinations[args.data]
+    id_=file_id_dic['FaceMaskDetection'], destination=file_destinations['FaceMaskDetection']
 )
 
 """압축 풀기"""
