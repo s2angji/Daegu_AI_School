@@ -279,12 +279,12 @@ for im, annot in tqdm(test_loader, position=0, leave=True):
 
 
 """바운딩 박스 시각화 그리는 곳"""
-nrows = 8
+nrows = 10
 ncols = 2
 fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=(ncols*4, nrows*4))
 
 batch_i = 0
-for im, annot in test_loader:
+for im, annot in test_loader: # DataLoader의 배치 사이즈에 주의할 것, batch_i
     pos = batch_i * 4 + 1
     for sample_i in range(len(im)):
 
