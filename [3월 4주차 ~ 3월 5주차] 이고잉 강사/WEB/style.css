@@ -1,0 +1,39 @@
+/* body {
+    background-image: url(https://picsum.photos/1024);
+    background-size: cover;
+} */
+
+h1 {
+    border-bottom: 10px solid darkred !important;
+    padding: 30px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+@media all and (min-width: 480px) {
+    #container {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+@media all and (max-width: 480px) {
+    body {
+        background-color: lightpink;
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        background-color: lightgray;
+    }
+}

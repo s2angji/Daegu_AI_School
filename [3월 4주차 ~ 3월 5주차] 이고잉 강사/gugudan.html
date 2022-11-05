@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>구구단</title>
+</head>
+
+<body class="container" style="padding: 50px;">
+    <script>
+        function quiz(btn) {
+            if (prompt(btn.value) === btn.className)
+                btn.style.backgroundColor = 'lightblue';
+            else
+                btn.style.backgroundColor = 'lightpink';
+        }
+
+        var tag = '';
+        for (var i = 2; i < 10; i++) {
+            for (var j = 1; j < 10; j++)
+                tag += `<input class="${i * j}" type="button" value="${i} * ${j}" onclick="quiz(this);">`
+            tag += '<br/>'
+        }
+        document.write(tag);
+    </script>
+</body>
+
+</html>

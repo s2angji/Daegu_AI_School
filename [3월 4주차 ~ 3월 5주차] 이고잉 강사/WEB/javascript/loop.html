@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #ADC178;
+                color: #F0EAD2;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>배열(Array)</h1>
+        <script>
+            var topic1 = 'html';
+            var member1 = 'egoing';
+            var topic2 = 'css';
+            var member2 = 'leezche';
+            var topic3 = 'js';
+            var memver3 = 'duru';
+
+            var topics = ['html', 'css', 'js'];
+            var memvers = ['egoing', 'leezche', 'duru'];
+            console.log(topics.length);
+            console.log(topics[0]); // html
+        </script>
+
+        <h1>반복문(Loop)</h1>
+        <script>
+            console.log(1);
+            for(let i = 0; i < 3; i++) {
+                console.log(2);
+                console.log(3);
+            }
+            console.log(4);
+        </script>
+
+        <h1>Array + Loop</h1>
+        <script>
+            var topics = ['html', 'css', 'js'];
+
+            for (var i = 0; i < topics.length; i++) {
+                document.write('<li>' + topics[i] + '</li>');
+            }
+        </script>
+
+        <script>
+            var topics = ['html', 'css', 'js'];
+            for (var i = 0; i < topics.length; i++){
+                document.write('<li>' + topics[i] + '</li>');
+                document.write(`<li>${topics[i]}</li>`);
+                console.log(topics[i]);
+            }
+        </script>
+    </body>
+</html>

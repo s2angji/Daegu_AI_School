@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h1>function</h1>
+        <script>
+            function a_z() {
+                var c = 'a'.charCodeAt(0);
+                for (var i = 0; i <= 'z'.charCodeAt(0) - 'a'.charCodeAt(0); i++)
+                    console.log(String.fromCharCode(c++));
+            }
+            console.log(1);
+            a_z();
+            console.log(2);
+            a_z();
+            console.log(3);
+        </script>
+        <h1>VAT</h1>
+        <script>
+            function calcVat(price, rate) { // 매개변수, parameter
+                let vat = price * rate;
+                return vat;
+            }
+            calcVat(2000, 0.2); // 인자, argument, 입력값
+        </script>
+
+        <h1>SUM</h1>
+        <script>
+            var sum = (val1, val2) => val1 + val2;
+            console.log(sum(30, 20));
+        </script>
+    </body>
+</html>
