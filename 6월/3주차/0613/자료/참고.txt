@@ -1,5 +1,0 @@
-Object Detection YOLOV5 -> https://github.com/ultralytics/yolov5
-
-Object Detection 프레임워크 https://github.com/facebookresearch/detectron2
-
-Object Detection 공개 데이터 https://public.roboflow.com/object-detection/ -> 회원가입 필요

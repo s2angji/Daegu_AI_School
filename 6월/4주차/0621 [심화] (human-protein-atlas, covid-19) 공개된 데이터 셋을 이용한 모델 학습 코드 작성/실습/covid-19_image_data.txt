@@ -1,1 +1,0 @@
-dataset : covid-19_image_data
